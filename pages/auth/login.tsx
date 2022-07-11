@@ -9,12 +9,15 @@ const LoginPage = () => {
     <Layout title="Log In">
       <LoginForm
         onSuccess={(_user) => {
-          const next = router.query.next ? decodeURIComponent(router.query.next as string) : "/"
-          return router.push(next)
+          // const next = router.query.next ? decodeURIComponent(router.query.next as string) : "/"
+          // return router.push(next)
+          console.log("goto projects")
         }}
       />
     </Layout>
   )
 }
+
+LoginPage.redirectAuthenticatedTo = "/projects"
 
 export default LoginPage
